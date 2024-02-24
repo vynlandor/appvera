@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <!-- Botón de menú desplegable con tres rayas -->
+      <button class="menu-desplegable" onclick="toggleMenu()">&#8801;</button>
+      <h1 class="menu-title">LA VERA PIZZA</h1>
+      <h1 class="menu-title-1">ALBA MADRE</h1>
+    </header>
+
+    <section class="container" id="menuContainer">
+      <div class="menu-1">
+        <!-- Botones adicionales -->
+        <a href="hacerpedidos.html" class="menu-button-1">HACER PEDIDO</a>
+        <a href="productos.html" class="menu-button-2">NUESTROS PRODUCTOS</a>
+      </div>
+
+      <div id="menu-2">
+        <!-- Botones del menú -->
+        <a href="index.html" class="menu-button">Inicio</a>
+        <a href="pizzanapolitana.html" class="menu-button">Pizza Napolitana</a>
+        <a href="Quienessomos.html" class="menu-button">¿Quienes somos?</a>
+        <a href="productos.html" class="menu-button">Productos</a>
+        <a href="contacto.html" class="menu-button">Contacto</a>
+      </div>
+    </section>
+
+    <video autoplay loop muted class="background-video">
+      <source src="video/video-portada.webm" type="video/webm" />
+      Tu navegador no soporta el elemento de video.
+    </video>
+
+    <section class="container-1" id="menuContainer1">
+      <div class="menu-3">
+        <h1 class="menu-title-3">LAS MEJORES PIZZAS NAPOLITANAS</h1>
+        <!-- Botones adicionales -->
+        <button class="menu-button-3">HACER PEDIDO</button>
+        <button class="menu-button-3">PRODUCTOS</button>
+      </div>
+    </section>
+
+    <script>
+      function toggleMenu() {
+        var container = document.getElementById("menuContainer");
+        var header = document.getElementById("header");
+        container.classList.toggle("visible");
+        header.classList.toggle("transparent");
+      }
+    </script>
+
+    <main>
+      <div class="boton-whatsapp">
+        <a href="https://wa.me/1234567890" target="_blank">
+          <img src="img/wp2-icon.png" alt="WhatsApp" />
+        </a>
+      </div>
+    </main>
+    
+  </body>
+</html>

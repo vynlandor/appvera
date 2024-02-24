@@ -1,0 +1,202 @@
+#menuContainer {
+  position: fixed; /* Posicionar el contenedor de menú de forma fija */
+  top: 84px; /* Alinear el contenedor de menú con la parte superior */
+  left: 0; /* Alinear el contenedor de menú con la izquierda */
+  z-index: 999; /* Colocar el contenedor de menú delante de todo el contenido */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Coloca el video detrás de todo el contenido */
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente al 50% */
+  position: fixed;
+}
+
+.menu-title {
+  margin-right: 10px; /* Espacio entre el título y el botón */
+  color: white;
+  font-size: 20px;
+  position: absolute; /* Hacer que el título sea absolutamente posicionado */
+  left: 50%; /* Colocar el borde izquierdo del título en el centro de la pantalla */
+  top: 5px; /* Subir el título 20px desde la parte superior */
+  transform: translateX(
+    -50%
+  ); /* Mover el título hacia la izquierda en un 50% de su ancho */
+}
+
+.menu-title-1 {
+  margin-right: 10px; /* Espacio entre el título y el botón */
+  color: white;
+  font-size: 18px;
+  position: absolute; /* Hacer que el título sea absolutamente posicionado */
+  left: 50%; /* Colocar el borde izquierdo del título en el centro de la pantalla */
+  top: 30px; /* Subir el título 20px desde la parte superior */
+  transform: translateX(
+    -50%
+  ); /* Mover el título hacia la izquierda en un 50% de su ancho */
+}
+
+/* Puedes ajustar los estilos según tus preferencias */
+
+.container {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente al 50% */
+  width: 100%;
+  height: 36%;
+}
+
+.visible {
+  display: block;
+}
+
+.transparent {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Cambia el fondo a un negro transparente */
+}
+
+.menu-desplegable {
+  margin-top: 15px;
+  margin-bottom: 18px;
+  margin-left: 15px;
+  font-size: 24px; /* Tamaño del icono */
+  background-color: rgba(0, 0, 0, 0); /* Fondo negro transparente al 50% */
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-1 {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  padding: 20px;
+  color: white;
+  gap: 30px;
+  text-align: center;
+}
+
+.menu-button-1 {
+  background-color: #b14b1c; /* Color de fondo */
+  border: none;
+  color: white;
+  padding: 15px 32px; /* Espaciado interno */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px; /* Ancho fijo */
+  height: 40px;
+  cursor: pointer;
+}
+
+.menu-button-2 {
+  background-color: #adaf4c; /* Color de fondo */
+  border: none;
+  color: white;
+  padding: 15px 32px; /* Espaciado interno */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px; /* Ancho fijo */
+  height: 40px;
+  cursor: pointer;
+}
+
+.menu-button {
+  margin-left: auto; /* Alinear al centro horizontalmente */
+  margin-right: auto; /* Alinear al centro horizontalmente */
+  width: 90%; /* Establecer el ancho al 80% del contenedor */
+  padding: 15px;
+  display: block; /* Mostrar los enlaces como bloques */
+  margin-bottom: 10px; /* Espacio entre los enlaces */
+  background-color: black;
+  color: white;
+  border: 2px solid white; /* Establecer el borde de 2px sólido blanco */
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none; /* Quita el subrayado */
+}
+
+.container-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Centrar el texto horizontalmente */
+}
+
+
+
+.menu-button-3 {
+  padding: 10px;
+  width: 250px;
+  height: 50px;
+  background-color: rgb(202, 125, 37);
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5px; /* Espacio entre botones */
+}
+
+.menu-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar los elementos verticalmente */
+}
+
+.menu-title-3 {
+  margin-bottom: 20px; /* Espacio entre la frase y los botones */
+  color: white;
+  font-size: 24px;
+}
+
+/*/////////////////////////////////////////////////////////////////// BOTONES WHATSAPP ///////////////////////////////////////////////////////////////////*/
+
+.boton-whatsapp {
+  position: fixed;
+  bottom: 10px; /* Ajusta la distancia desde abajo */
+  right: 10px; /* Ajusta la distancia desde la derecha */
+  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+/*/////////////////////////////////////////////////////////////////// Consulta de medios para tamaños de pantalla menores o iguales a 600px ///////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 750px) {
+  .container {
+    height: auto; /* Altura automática en dispositivos móviles */
+  }
+
+  .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para cubrir el área */
+    overflow: hidden;
+    z-index: -1; /* Coloca el video detrás de todo el contenido */
+  }
+}
+
+
+/*PRODUCTOS*/

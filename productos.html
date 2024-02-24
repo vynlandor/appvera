@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>PRODUCTOS</title>
+    <style>
+      /* Estilos generales */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Estilos para el contenedor de las imágenes */
+      .image-container {
+        text-align: center; /* Centrar contenido */
+        margin-top: 20px; /* Espacio superior */
+      }
+
+      /* Estilos para el nombre del conjunto de imágenes */
+      .category-name {
+        font-size: 30px;
+        margin-bottom: 10px; /* Espacio inferior */
+        color: white;
+      }
+
+      /* Estilos para las imágenes */
+      .image-container img {
+        max-width: 110px; /* Ancho máximo */
+        height: auto; /* Altura automática para mantener la proporción */
+        margin: 5px; /* Espacio entre las imágenes */
+        display: inline-block; /* Asegura que las imágenes estén en línea */
+      }
+
+      /* Estilos para el contenedor del nombre y las imágenes */
+      .image-group {
+        text-align: center; /* Centrar contenido */
+      }
+
+      /* Estilos para el diseño de dos filas */
+      .row {
+        margin-bottom: 20px; /* Espacio entre las filas */
+      }
+
+      /* Estilos para el contenedor de fondo */
+      .image-wrapper {
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+        border-radius: 10px; /* Borde suave */
+        padding: 10px; /* Espacio alrededor de las imágenes */
+        display: inline-block; /* Asegura que el contenedor se ajuste al contenido */
+      }
+
+      /* Media query para pantallas pequeñas */
+      @media only screen and (max-width: 600px) {
+        .image-container img {
+          width: calc(100% - 20px); /* Ancho completo del contenedor */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <!-- Botón de menú desplegable con tres rayas -->
+      <button class="menu-desplegable" onclick="toggleMenu()">&#8801;</button>
+      <h1 class="menu-title">LA VERA PIZZA</h1>
+      <h1 class="menu-title-1">ALBA MADRE</h1>
+    </header>
+
+    <section class="container" id="menuContainer">
+      <div class="menu-1">
+        <!-- Botones adicionales -->
+        <a href="hacerpedidos.html" class="menu-button-1">HACER PEDIDO</a>
+        <a href="productos.html" class="menu-button-2">NUESTROS PRODUCTOS</a>
+      </div>
+
+      <div id="menu-2">
+        <!-- Botones del menú -->
+        <a href="index.html" class="menu-button">Inicio</a>
+        <a href="pizzanapolitana.html" class="menu-button">Pizza Napolitana</a>
+        <a href="Quienessomos.html" class="menu-button">¿Quienes somos?</a>
+        <a href="productos.html" class="menu-button">Productos</a>
+        <a href="contacto.html" class="menu-button">Contacto</a>
+      </div>
+    </section>
+
+    <video autoplay loop muted class="background-video">
+      <source src="video/video-portada.webm" type="video/webm" />
+      Tu navegador no soporta el elemento de video.
+    </video>
+
+    <main>
+      <!-- Contenedor del nombre y las imágenes -->
+      <div class="image-group">
+        <!-- Nombre del conjunto de imágenes -->
+        <h2 class="category-name">PREPIZZAS</h2>
+        <!-- Contenedor de fondo -->
+        <div class="image-wrapper">
+          <!-- Imágenes -->
+          <div class="row">
+            <div class="image-container">
+              <img src="img/logovera.jpeg" />
+              <img src="img/logovera.jpeg" />
+              <img src="img/logovera.jpeg" />
+              <img src="img/logovera.jpeg" />
+              <img src="img/logovera.jpeg" />
+              <img src="img/logovera.jpeg" />
+            </div>
+          </div>
+          <h2 class="category-name">PIZZAS LISTAS</h2>
+          <div class="image-container">
+            <img src="img/logovera.jpeg" />
+            <img src="img/logovera.jpeg" />
+            <img src="img/logovera.jpeg" />
+            <img src="img/logovera.jpeg" />
+            <img src="img/logovera.jpeg" />
+            <img src="img/logovera.jpeg" />
+          </div>
+          <h2 class="category-name">HOGAZAS</h2>
+          <div class="image-container">
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+          </div>
+          <h2 class="category-name">BAGUETTES</h2>
+          <div class="image-container">
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+          </div>
+          <h2 class="category-name">PAN INTEGRAL</h2>
+          <div class="image-container">
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+          </div>
+          <h2 class="category-name">FOCACCIAS</h2>
+          <div class="image-container">
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+          </div>
+          <h2 class="category-name">PIZZETAS</h2>
+          <div class="image-container">
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+            <img src="img/albaprueba.jpeg" />
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        var container = document.getElementById("menuContainer");
+        var header = document.getElementById("header");
+        container.classList.toggle("visible");
+        header.classList.toggle("transparent");
+      }
+    </script>
+        <main>
+          <div class="boton-whatsapp">
+            <a href="https://wa.me/1234567890" target="_blank">
+              <img src="img/wp2-icon.png" alt="WhatsApp" />
+            </a>
+          </div>
+        </main>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+
+    <style>
+      /* Estilos para el formulario */
+      .formulario {
+        border: 2px solid black; /* Borde */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente negro */
+        padding: 20px;
+        width: 80%; /* Ancho del formulario */
+        margin: 20px auto; /* Centrar el formulario horizontalmente */
+        text-align: center; /* Centrar elementos */
+      }
+      /* Estilos para el título */
+      .formulario h2 {
+        color: white; /* Color blanco */
+      }
+      /* Estilos para los inputs y el botón */
+      .formulario input[type="text"],
+      .formulario input[type="number"],
+      .formulario select,
+      .formulario button {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* Considerar el padding y border en el tamaño */
+        height: 40px; /* Altura del campo de entrada */
+        width: 90%;
+      }
+      /* Estilos para el botón */
+    .button {
+        background-color: #4caf50; /* Color de fondo */
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      /* Estilos para el texto */
+      .formulario label {
+        color: white;
+        display: block; /* Convertir en bloque */
+        text-align: center; /* Centrar el texto */
+        margin-bottom: 5px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      /* Estilos para el botón de siguiente y volver */
+      .boton {
+        background-color: #2d1b6d; /* Color de fondo */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <!-- Botón de menú desplegable con tres rayas -->
+      <button class="menu-desplegable" onclick="toggleMenu()">&#8801;</button>
+      <h1 class="menu-title">LA VERA PIZZA</h1>
+      <h1 class="menu-title-1">ALBA MADRE</h1>
+    </header>
+
+    <div class="formulario">
+      <h2>Realizar Pedido</h2>
+      <form id="pedidoForm">
+        <div id="pagina1" class="pagina">
+          <!-- Contenido de la primera página del formulario -->
+          <ul>
+            <li>
+              <label for="cantidad_PREPIZZAS">PREPIZZAS:</label>
+              <input
+                type="number"
+                id="cantidad_PREPIZZAS"
+                name="cantidad_PREPIZZAS"
+                min="1"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="cantidad_HOGAZAS">HOGAZAS:</label>
+              <input
+                type="number"
+                id="cantidad_HOGAZAS"
+                name="cantidad_HOGAZAS"
+                min="1"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="cantidad_BAGUETTES">BAGUETTES:</label>
+              <input
+                type="number"
+                id="cantidad_BAGUETTES"
+                name="cantidad_BAGUETTES"
+                min="1"
+                value=""
+              />
+            </li>
+          </ul>
+          <button type="button" class="boton" onclick="siguienteParte()">
+            Siguiente &#8594;
+          </button>
+        </div>
+
+        <div id="pagina2" class="pagina" style="display: none;">
+          <!-- Contenido de la segunda página del formulario -->
+          <ul>
+            <li>
+              <label for="cantidad_FOCACCIAS">FOCACCIAS:</label>
+              <input
+                type="number"
+                id="cantidad_FOCACCIAS"
+                name="cantidad_FOCACCIAS"
+                min="1"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="cantidad_PAN_INTEGRAL">PAN INTEGRAL:</label>
+              <input
+                type="number"
+                id="cantidad_PAN_INTEGRAL"
+                name="cantidad_PAN_INTEGRAL"
+                min="1"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="cantidad_PAN_INTEGRAL">PIZZETAS:</label>
+              <input
+                type="number"
+                id="cantidad_PAN_INTEGRAL"
+                name="cantidad_PAN_INTEGRAL"
+                min="1"
+                value=""
+              />
+            </li>
+          </ul>
+          <button type="button" class="boton" onclick="volver()">
+            &#8592; Volver
+          </button>
+        </div>
+
+        <br /><br />
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" /><br /><br />
+        <button type="button" class="button"onclick="enviarPedido()">Enviar Pedido</button>
+      </form>
+    </div>
+
+    <section class="container" id="menuContainer">
+      <div class="menu-1">
+        <!-- Botones adicionales -->
+        <a href="hacerpedidos.html" class="menu-button-1">HACER PEDIDO</a>
+        <a href="productos.html" class="menu-button-2">NUESTROS PRODUCTOS</a>
+      </div>
+
+      <div id="menu-2">
+        <!-- Botones del menú -->
+        <a href="index.html" class="menu-button">Inicio</a>
+        <a href="pizzanapolitana.html" class="menu-button">Pizza Napolitana</a>
+        <a href="Quienessomos.html" class="menu-button">¿Quienes somos?</a>
+        <a href="productos.html" class="menu-button">Productos</a>
+        <a href="contacto.html" class="menu-button">Contacto</a>
+      </div>
+    </section>
+
+    <video autoplay loop muted class="background-video">
+      <source src="video/video-portada.webm" type="video/webm" />
+      Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- SCRIPTS-->
+    <script>
+      function toggleMenu() {
+        var container = document.getElementById("menuContainer");
+        var header = document.getElementById("header");
+        container.classList.toggle("visible");
+        header.classList.toggle("transparent");
+      }
+
+      function siguienteParte() {
+        // Mostrar la siguiente página del formulario y ocultar la actual
+        document.getElementById("pagina1").style.display = "none";
+        document.getElementById("pagina2").style.display = "block";
+      }
+
+      function volver() {
+        // Mostrar la primera página del formulario y ocultar la segunda
+        document.getElementById("pagina1").style.display = "block";
+        document.getElementById("pagina2").style.display = "none";
+      }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function enviarPedido() {
+        var productos = [];
+        $("input[type='number']").each(function () {
+          var cantidad = $(this).val();
+          var producto = $(this).prev().text();
+          productos.push(producto + ": " + cantidad);
+        });
+        var nombre = $("#nombre").val();
+
+        var mensaje = "Hola, quiero realizar un pedido:\n";
+        mensaje += productos.join("\n");
+        mensaje += "\nNombre: " + nombre;
+
+        // Enviar los datos del formulario al backend para procesar y enviar el mensaje de WhatsApp
+        $.ajax({
+          url: "tu_backend.php", // Reemplaza esto con la URL de tu backend
+          type: "POST",
+          data: { mensaje: mensaje },
+          success: function (response) {
+            alert("Pedido enviado correctamente.");
+          },
+          error: function (xhr, status, error) {
+            alert("Error al enviar el pedido.");
+            console.error(xhr.responseText);
+          },
+        });
+      }
+    </script>
+        <main>
+          <div class="boton-whatsapp">
+            <a href="https://wa.me/1234567890" target="_blank">
+              <img src="img/wp2-icon.png" alt="WhatsApp" />
+            </a>
+          </div>
+        </main>
+  </body>
+</html>
